@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="newcss.css" rel="stylesheet" type="text/css"/>
+        <title>PAGINA EVANGELION</title>
+
+        <style>
+            /* Configura el cuerpo para llenar toda la altura de la ventana */
+            body, html {
+                height: 100%;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* Cada sección ocupa el 50% de la altura de la ventana */
+            .top, .bottom {
+                height: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+            }
+
+            /* Estilo para la parte superior */
+            .top {
+
+                background-color: lightblue;
+            }
+
+            /* Estilo para la parte inferior */
+            .bottom {
+                background-image:url(https://i.pinimg.com/564x/aa/71/58/aa7158be611af1d34165a80f427bde7b.jpg);
+                height: 80%;
+                background-color: lightgreen;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="top">
+            <iframe src="https://eyes.nasa.gov/apps/orrery/#/home" width="1550" height="900"></iframe>
+
+        </div>
+        <div class="bottom">
+            <style>
+                /* Configuración de la página */
+                body {
+                    display: flex;
+                    height: 280vh; /* Ocupa el 100% de la altura de la ventana */
+                    margin: 0; /* Elimina márgenes por defecto */
+                }
+
+                /* División de las dos secciones, izquierda y derecha, con 50% de ancho */
+                .left, .right {
+                    flex: 1; /* Ambas partes ocupan el mismo ancho */
+                    padding: 80px;
+                }
+
+                /* Estilos de la parte izquierda */
+                .left {
+                    background-color: black;
+                    text-align: left;   /* Color de fondo de la parte izquierda */
+                }
+
+                /* Estilos de la parte derecha */
+                .right {
+
+                }
+            </style>
+            <style>
+                h5, h6 {
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+            <div class="left">
+                <h3>¿QUÉ ES LA APLICACIÓN?</h3>
+                <h4>La aplicación de orrery es un software que simula el movimiento de los cuerpos celestes, como planetas, lunas y estrellas, en un modelo del sistema solar o de un sistema estelar. Un orrery tradicional es un dispositivo mecánico que muestra las posiciones relativas y los movimientos de los planetas alrededor del sol. En el contexto digital, estas aplicaciones recrean estos movimientos con animaciones y simulaciones interactivas, permitiendo a los usuarios explorar cómo se comportan los planetas y otros objetos astronómicos en diferentes momentos.
+                    Estas aplicaciones son útiles tanto para fines educativos como para la investigación, ya que permiten visualizar fenómenos astronómicos como eclipses, fases lunares, alineaciones planetarias y órbitas en general.</h4>          
+            </div>
+
+            <div class="right">
+                <h3>CARACTERÍSTICAS DE LA APP</h3>   
+                <style>
+                    #mensaje {
+                        display: none;
+                        margin-top: 10px;
+                        font-size: 18px;
+                        color: #333;
+                    }
+                    .imagen-container {
+                        display: inline-block;
+                        margin: 10px;
+                        text-align: center;
+                    }
+                </style>
+                </head>
+                <div class="imagen-container">
+                    <button onclick="mostrarMensaje('info1')">
+                        <img src="https://th.bing.com/th/id/OIP._IaFn2DCizuY9mVPc_-bIwHaD5?rs=1&pid=ImgDetMain" alt="Planeta" width="400" height="200">
+                    </button>
+                    <div id="mensaje1" class="mensaje">
+                        <h5 id="titulo1"></h5>
+                        <h6 id="contenido1"></h6>
+                    </div>
+                </div>
+
+                <div class="imagen-container">
+                    <button onclick="mostrarMensaje('info2')">
+                        <img src="https://i.pinimg.com/736x/98/7b/05/987b05da3088f45a452e40b3677b481f.jpg" alt="Planeta" width="400" height="200">
+                    </button>
+                    <div id="mensaje2" class="mensaje">
+                        <h5 id="titulo2"></h5>
+                        <h6 id="contenido2"></h6>
+                    </div>
+                </div>
+
+                <div class="imagen-container">
+                    <button onclick="mostrarMensaje('info3')">
+                        <img src="https://th.bing.com/th/id/R.127113ecbc8a81ff7ffed8342e562767?rik=%2fxAzkc1O2KJLSA&pid=ImgRaw&r=0" alt="Planeta" width="400" height="200">
+                    </button>
+                    <div id="mensaje3" class="mensaje">
+                        <h5 id="titulo3"></h5>
+                        <h6 id="contenido3"></h6>
+                    </div>
+                </div>
+
+                <div class="imagen-container">
+                    <button onclick="mostrarMensaje('info4')">
+                        <img src="https://i.pinimg.com/564x/89/16/1a/89161a6677fee6704bbd6d7b3ce3b75c.jpg" alt="Planeta" width="400" height="200">
+                    </button>
+                    <div id="mensaje4" class="mensaje">
+                        <h5 id="titulo4"></h5>
+                        <h6 id="contenido4"></h6>
+                    </div>
+                </div>
+
+                <div class="imagen-container">
+                    <button onclick="mostrarMensaje('info5')">
+                        <img src="https://i.pinimg.com/564x/f3/ed/dd/f3edddfc2ec15d672e5d02fe37531994.jpg" alt="Planeta" width="400" height="200">
+                    </button>
+                    <div id="mensaje5" class="mensaje">
+                        <h5 id="titulo5"></h5>
+                        <h6 id="contenido5"></h6>
+                    </div>
+                </div>
+
+                <script>
+                    function mostrarMensaje(info) {
+                        // Ocultar todos los mensajes primero
+                        const mensajes = document.querySelectorAll('.mensaje');
+                        mensajes.forEach(m => m.style.display = 'none');
+
+                        const titulo = document.getElementById(`titulo${info.charAt(info.length - 1)}`);
+                        const contenido = document.getElementById(`contenido${info.charAt(info.length - 1)}`);
+                        const mensaje = document.getElementById(`mensaje${info.charAt(info.length - 1)}`);
+
+                        if (info === 'info1') {
+                            titulo.textContent = 'Interactividad:';
+                            contenido.textContent = 'Puedes interactuar con los planetas, rotarlos y ver información detallada sobre cada uno, como su tamaño, composición, y distancia del sol. Algunos modelos incluso permiten aterrizar en los planetas y explorar su superficie.';
+                        } else if (info === 'info2') {
+                            titulo.textContent = 'Posiciones en Tiempo Real:';
+                            contenido.textContent = 'La app muestra las posiciones actuales de los planetas en sus órbitas, lo que te permite ver cómo se alinean en un momento dado. Esto es especialmente útil para los aficionados a la astronomía que quieren seguir eventos celestiales.';
+                        } else if (info === 'info3') {
+                            titulo.textContent = 'Música y Sonidos Ambientales:';
+                            contenido.textContent = 'Para hacer la experiencia más inmersiva, la app incluye música de fondo y efectos de sonido que te acompañan mientras exploras el espacio.';
+                        } else if (info === 'info4') {
+                            titulo.textContent = 'Visualización Clara:';
+                            contenido.textContent = 'Ayuda a entender mejor la estructura y dinámica del sistema solar a través de visualizaciones claras y detalladas.';
+                        } else if (info === 'info5') {
+                            titulo.textContent = 'Accesibilidad:';
+                            contenido.textContent = 'Disponible en múltiples plataformas, lo que permite su uso en dispositivos móviles, tabletas y computadoras.';
+                        } else if (info === 'info6') {
+                            titulo.textContent = 'Comparación con Solar System Scope:';
+                            contenido.textContent = 'Otra app similar es Solar System Scope, que también ofrece una experiencia interactiva del sistema solar.';
+                        }
+
+                        mensaje.style.display = 'block';
+                    }
+                </script>
+                <div class="menu">
+                    <li><a href="informacion.html">NASA</li>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego del Sistema Solar</title>
+  <style>
+    .planet {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: inline-block;
+      text-align: center;
+      line-height: 100px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #mercury { background-color: gray; }
+    #venus { background-color: yellow; }
+    #earth { background-color: blue; }
+    #mars { background-color: red; }
+    #jupiter { background-color: brown; }
+    #saturn { background-color: gold; }
+    #uranus { background-color: lightblue; }
+    #neptune { background-color: darkblue; }
+  </style>
+</head>
+<body>
+  <h1>Juego del Sistema Solar</h1>
+  <div id="mercury" class="planet" onclick="showInfo('Mercurio', 'El planeta más cercano al Sol')">Mercurio</div>
+  <div id="venus" class="planet" onclick="showInfo('Venus', 'Conocido como el gemelo de la Tierra')">Venus</div>
+  <div id="earth" class="planet" onclick="showInfo('Tierra', 'Nuestro hogar')">Tierra</div>
+  <div id="mars" class="planet" onclick="showInfo('Marte', 'El planeta rojo')">Marte</div>
+  <div id="jupiter" class="planet" onclick="showInfo('Júpiter', 'El planeta más grande')">Júpiter</div>
+  <div id="saturn" class="planet" onclick="showInfo('Saturno', 'Conocido por sus anillos')">Saturno</div>
+  <div id="uranus" class="planet" onclick="showInfo('Urano', 'Un gigante gaseoso')">Urano</div>
+  <div id="neptune" class="planet" onclick="showInfo('Neptuno', 'El planeta más lejano')">Neptuno</div>
+
+  <script>
+    function showInfo(planet, info) {
+      alert(planet + ': ' + info);
+    }
+  </script>
+</body>
+</html>
